@@ -1,0 +1,33 @@
+<div>
+<h1>{{head}}</h1>
+<h3>{{head2}}</h3>
+
+<table>
+  <tr>
+    <td><b>Product Name</b></td>
+    <td><b>Quantity</b></td>
+  </tr>
+  <tr>
+      <td>MotoG5</td>
+      <td>2</td>
+  </tr>
+  <tr>
+      <td>Raycold Geyser</td>
+      <td>3</td>
+  </tr>
+  <tr *ngFor='let n of prod'>
+      <td>{{n[0]}}</td>
+      <td>{{n[1]}}</td>
+  </tr>
+</table>
+
+<div> 
+  <p>Enter product name
+    <input type = "text" [(ngModel)]='name' />
+    
+    Enter quantity
+    <input type = "text" [(ngModel)]='quantity' />
+    <button (click)='onClick()'>Add Product</button>
+  </p>
+  </div>
+</div>
